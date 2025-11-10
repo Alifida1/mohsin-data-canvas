@@ -246,7 +246,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4">Portfolio</Badge>
-            <h2 className="text-4xl font-bold mb-4">Digital Product Showcases</h2>
+            <h2 className="text-4xl font-bold mb-4">Projects and Case Studies</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
