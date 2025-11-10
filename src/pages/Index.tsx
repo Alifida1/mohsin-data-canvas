@@ -26,73 +26,111 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary opacity-10"></div>
+      <section id="home" className="relative min-h-screen pt-20 pb-20 px-6 overflow-hidden flex items-center">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"></div>
         
-        {/* Decorative elements */}
-        <div className="absolute top-20 right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        {/* Floating decorative elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Particle effects */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-secondary rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
         
         <div className="container mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <div className="inline-block">
-                <Badge className="bg-accent text-accent-foreground px-4 py-2 text-sm">
-                  Data Analyst & Freelance Consultant
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left content */}
+            <div className="space-y-8 animate-fade-in">
+              <div className="inline-block animate-slide-up">
+                <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground px-6 py-2 text-sm font-medium shadow-lg backdrop-blur-sm border border-accent/20">
+                  ✨ Data Analyst & Freelance Consultant
                 </Badge>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Hello, I'm <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Mohsin Ali
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-lg">
-                Transforming raw data into actionable insights through advanced analytics, visualization, and machine learning.
+              
+              <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight">
+                  Hello, I'm
+                </h1>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
+                    Mohsin Ali
+                  </span>
+                </h1>
+              </div>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                Transforming raw data into <span className="text-primary font-semibold">actionable insights</span> through advanced analytics, visualization, and machine learning.
               </p>
-              <div className="flex gap-4 pt-4">
-                <Button size="lg" className="bg-accent hover:bg-accent/90">
+              
+              <div className="flex flex-wrap gap-4 pt-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+                <Button size="lg" className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent/80 text-accent-foreground shadow-lg hover:shadow-xl transition-all hover:scale-105 px-8">
                   View Portfolio
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="border-2 hover:bg-accent/10 hover:border-accent transition-all hover:scale-105 px-8">
                   Contact Me
                 </Button>
               </div>
-              <div className="flex gap-4 pt-6">
-                <a href="mailto:mohsinalimughal96@gmail.com" className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Mail className="w-5 h-5" />
+              
+              <div className="flex gap-3 pt-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                <a href="mailto:mohsinalimughal96@gmail.com" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110 hover:shadow-lg">
+                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
-                <a href="tel:+353899854920" className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Phone className="w-5 h-5" />
+                <a href="tel:+353899854920" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-accent hover:bg-accent/10 transition-all hover:scale-110 hover:shadow-lg">
+                  <Phone className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
                 </a>
-                <a href="#" className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Linkedin className="w-5 h-5" />
+                <a href="#" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-secondary hover:bg-secondary/10 transition-all hover:scale-110 hover:shadow-lg">
+                  <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors" />
                 </a>
-                <a href="#" className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Github className="w-5 h-5" />
+                <a href="#" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110 hover:shadow-lg">
+                  <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
               </div>
             </div>
             
+            {/* Right content - Profile Image */}
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative w-full max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent to-primary rounded-full opacity-20 blur-2xl"></div>
-                <div className="relative aspect-square rounded-full overflow-hidden border-8 border-accent shadow-2xl">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-32 h-32 mx-auto bg-muted rounded-full flex items-center justify-center mb-4">
-                        <Database className="w-16 h-16 text-primary" />
+              <div className="relative w-full max-w-lg mx-auto">
+                {/* Glowing background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-secondary rounded-full opacity-20 blur-3xl animate-pulse"></div>
+                
+                {/* Main profile circle */}
+                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl backdrop-blur-sm bg-gradient-to-br from-card/80 to-card/40">
+                  <div className="w-full h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center relative">
+                    {/* Animated circles inside */}
+                    <div className="absolute inset-10 rounded-full border-2 border-primary/20 animate-spin" style={{ animationDuration: '20s' }}></div>
+                    <div className="absolute inset-20 rounded-full border-2 border-accent/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+                    
+                    <div className="text-center relative z-10">
+                      <div className="w-40 h-40 mx-auto bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm border-2 border-accent/30 shadow-xl">
+                        <Database className="w-20 h-20 text-primary" />
                       </div>
-                      <p className="text-sm text-muted-foreground">Profile Photo Placeholder</p>
+                      <p className="text-sm text-muted-foreground font-medium">Profile Photo Placeholder</p>
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-card p-4 rounded-2xl shadow-lg border border-border">
-                  <p className="text-3xl font-bold text-primary">3+</p>
-                  <p className="text-sm text-muted-foreground">Years Experience</p>
+                
+                {/* Stats cards */}
+                <div className="absolute -top-6 -right-6 bg-gradient-to-br from-card to-card/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-accent/30 animate-float hover:scale-105 transition-transform">
+                  <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">3+</p>
+                  <p className="text-sm text-muted-foreground font-medium">Years Experience</p>
+                </div>
+                
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card to-card/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-primary/30 animate-float hover:scale-105 transition-transform" style={{ animationDelay: '1s' }}>
+                  <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">50+</p>
+                  <p className="text-sm text-muted-foreground font-medium">Projects Done</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
+            <div className="w-1 h-2 bg-muted-foreground/50 rounded-full"></div>
           </div>
         </div>
       </section>
