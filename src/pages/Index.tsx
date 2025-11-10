@@ -115,7 +115,7 @@ const Index = () => {
                   <TrendingUp className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">3+ Complete Projects</h3>
+                  <h3 className="text-xl font-bold mb-2">Projects and Case Studies</h3>
                   <p className="text-muted-foreground">
                     Successfully delivered end-to-end data analytics projects including predictive modeling, ETL pipelines, and interactive dashboards.
                   </p>
