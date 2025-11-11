@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, Linkedin, Github, Database, BarChart3, Brain, FileSpreadsheet, Code, TrendingUp } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Index = () => {
   return (
@@ -97,19 +99,11 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-secondary rounded-full opacity-20 blur-3xl animate-pulse"></div>
                 
                 {/* Main profile circle */}
-                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl backdrop-blur-sm bg-gradient-to-br from-card/80 to-card/40">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center relative">
-                    {/* Animated circles inside */}
-                    <div className="absolute inset-10 rounded-full border-2 border-primary/20 animate-spin" style={{ animationDuration: '20s' }}></div>
-                    <div className="absolute inset-20 rounded-full border-2 border-accent/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
-                    
-                    <div className="text-center relative z-10">
-                      <div className="w-40 h-40 mx-auto bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm border-2 border-accent/30 shadow-xl">
-                        <Database className="w-20 h-20 text-primary" />
-                      </div>
-                      <p className="text-sm text-muted-foreground font-medium">Profile Photo Placeholder</p>
-                    </div>
-                  </div>
+                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl backdrop-blur-sm">
+                  <Avatar className="w-full h-full">
+                    <AvatarImage src={profilePhoto} alt="Mohsin Ali" className="object-cover" />
+                    <AvatarFallback>MA</AvatarFallback>
+                  </Avatar>
                 </div>
                 
                 {/* Stats cards */}
