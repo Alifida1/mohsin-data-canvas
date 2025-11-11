@@ -4,10 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, Linkedin, Github, Database, BarChart3, Brain, FileSpreadsheet, Code, TrendingUp } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-6 py-4">
@@ -34,13 +32,21 @@ const Index = () => {
         
         {/* Floating decorative elements */}
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '2s'
+      }}></div>
         
         {/* Particle effects */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-secondary rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse" style={{
+        animationDelay: '0.5s'
+      }}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-secondary rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
         
         <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -52,7 +58,9 @@ const Index = () => {
                 </Badge>
               </div>
               
-              <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+              <div className="space-y-4 animate-slide-up" style={{
+              animationDelay: '0.1s'
+            }}>
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight">
                   Hello, I'm
                 </h1>
@@ -63,11 +71,15 @@ const Index = () => {
                 </h1>
               </div>
               
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed animate-slide-up" style={{
+              animationDelay: '0.2s'
+            }}>
                 Transforming raw data into <span className="text-primary font-semibold">actionable insights</span> through advanced analytics, visualization, and machine learning.
               </p>
               
-              <div className="flex flex-wrap gap-4 pt-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              <div className="flex flex-wrap gap-4 pt-6 animate-slide-up" style={{
+              animationDelay: '0.3s'
+            }}>
                 <Button size="lg" className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent/80 text-accent-foreground shadow-lg hover:shadow-xl transition-all hover:scale-105 px-8">
                   View Portfolio
                 </Button>
@@ -76,7 +88,9 @@ const Index = () => {
                 </Button>
               </div>
               
-              <div className="flex gap-3 pt-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <div className="flex gap-3 pt-8 animate-slide-up" style={{
+              animationDelay: '0.4s'
+            }}>
                 <a href="mailto:mohsinalimughal96@gmail.com" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110 hover:shadow-lg">
                   <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
@@ -93,7 +107,9 @@ const Index = () => {
             </div>
             
             {/* Right content - Profile Image */}
-            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="relative w-full max-w-lg mx-auto">
                 {/* Glowing background effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-secondary rounded-full opacity-20 blur-3xl animate-pulse"></div>
@@ -108,11 +124,13 @@ const Index = () => {
                 
                 {/* Stats cards */}
                 <div className="absolute -top-6 -right-6 bg-gradient-to-br from-card to-card/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-accent/30 animate-float hover:scale-105 transition-transform">
-                  <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">3+</p>
+                  <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">5+</p>
                   <p className="text-sm text-muted-foreground font-medium">Years Experience</p>
                 </div>
                 
-                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card to-card/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-primary/30 animate-float hover:scale-105 transition-transform" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card to-card/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-primary/30 animate-float hover:scale-105 transition-transform" style={{
+                animationDelay: '1s'
+              }}>
                   <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">50+</p>
                   <p className="text-sm text-muted-foreground font-medium">Projects Done</p>
                 </div>
@@ -161,7 +179,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-accent/50 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm group animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-accent/50 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm group animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="flex items-start gap-4">
                 <div className="p-4 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8 text-accent" />
@@ -176,7 +196,9 @@ const Index = () => {
             </Card>
           </div>
           
-          <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-4xl mx-auto animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <Card className="p-10 bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/30 hover:shadow-2xl transition-all duration-300">
               <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
                 <div className="w-1 h-8 bg-gradient-to-b from-primary to-accent rounded-full"></div>
@@ -312,7 +334,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
                 <Brain className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
@@ -326,7 +350,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-secondary/50 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-secondary/50 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
                 <Database className="w-20 h-20 text-secondary relative z-10 group-hover:scale-110 transition-transform" />
@@ -340,7 +366,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-primary/50 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-primary/50 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
                 <TrendingUp className="w-20 h-20 text-primary relative z-10 group-hover:scale-110 transition-transform" />
@@ -354,7 +382,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="aspect-video bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
                 <FileSpreadsheet className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
@@ -368,7 +398,9 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 border-primary/50 hover:border-primary bg-gradient-to-br from-primary/5 to-secondary/5 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 border-primary/50 hover:border-primary bg-gradient-to-br from-primary/5 to-secondary/5 animate-fade-in" style={{
+            animationDelay: '0.5s'
+          }}>
               <div className="aspect-video bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="text-center text-primary-foreground relative z-10">
@@ -392,7 +424,9 @@ const Index = () => {
         {/* Animated background */}
         <div className="absolute inset-0 bg-gradient-to-br from-muted/50 via-background to-muted/30"></div>
         <div className="absolute top-10 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16 animate-fade-in">
@@ -422,7 +456,9 @@ const Index = () => {
                     <span className="text-muted-foreground font-mono">90%</span>
                   </div>
                   <div className="h-3 bg-muted/50 rounded-full overflow-hidden backdrop-blur-sm">
-                    <div className="h-full bg-gradient-to-r from-primary via-secondary to-primary w-[90%] rounded-full animate-pulse shadow-lg shadow-primary/50" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="h-full bg-gradient-to-r from-primary via-secondary to-primary w-[90%] rounded-full animate-pulse shadow-lg shadow-primary/50" style={{
+                    animationDelay: '0.5s'
+                  }}></div>
                   </div>
                 </div>
                 <div className="group">
@@ -431,13 +467,17 @@ const Index = () => {
                     <span className="text-muted-foreground font-mono">85%</span>
                   </div>
                   <div className="h-3 bg-muted/50 rounded-full overflow-hidden backdrop-blur-sm">
-                    <div className="h-full bg-gradient-to-r from-primary via-secondary to-primary w-[85%] rounded-full animate-pulse shadow-lg shadow-primary/50" style={{ animationDelay: '1s' }}></div>
+                    <div className="h-full bg-gradient-to-r from-primary via-secondary to-primary w-[85%] rounded-full animate-pulse shadow-lg shadow-primary/50" style={{
+                    animationDelay: '1s'
+                  }}></div>
                   </div>
                 </div>
               </div>
             </Card>
             
-            <Card className="p-10 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-accent/30 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="p-10 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-accent/30 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
                 <div className="w-1 h-8 bg-gradient-to-b from-accent to-primary rounded-full"></div>
                 Visualization & Tools
@@ -458,7 +498,9 @@ const Index = () => {
                     <span className="text-muted-foreground font-mono">85%</span>
                   </div>
                   <div className="h-3 bg-muted/50 rounded-full overflow-hidden backdrop-blur-sm">
-                    <div className="h-full bg-gradient-to-r from-accent via-primary to-accent w-[85%] rounded-full animate-pulse shadow-lg shadow-accent/50" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="h-full bg-gradient-to-r from-accent via-primary to-accent w-[85%] rounded-full animate-pulse shadow-lg shadow-accent/50" style={{
+                    animationDelay: '0.5s'
+                  }}></div>
                   </div>
                 </div>
                 <div className="group">
@@ -467,14 +509,18 @@ const Index = () => {
                     <span className="text-muted-foreground font-mono">88%</span>
                   </div>
                   <div className="h-3 bg-muted/50 rounded-full overflow-hidden backdrop-blur-sm">
-                    <div className="h-full bg-gradient-to-r from-accent via-primary to-accent w-[88%] rounded-full animate-pulse shadow-lg shadow-accent/50" style={{ animationDelay: '1s' }}></div>
+                    <div className="h-full bg-gradient-to-r from-accent via-primary to-accent w-[88%] rounded-full animate-pulse shadow-lg shadow-accent/50" style={{
+                    animationDelay: '1s'
+                  }}></div>
                   </div>
                 </div>
               </div>
             </Card>
           </div>
           
-          <Card className="p-10 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/20 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <Card className="p-10 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/20 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
               <div className="w-1 h-8 bg-gradient-to-b from-primary via-accent to-secondary rounded-full"></div>
               Technologies & Libraries
@@ -502,7 +548,9 @@ const Index = () => {
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/5"></div>
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
         
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16 animate-fade-in">
@@ -531,7 +579,9 @@ const Index = () => {
               </Button>
             </Card>
             
-            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-accent/50 group animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-accent/50 group animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="flex items-center gap-5 mb-6">
                 <div className="p-5 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl group-hover:scale-110 group-hover:shadow-lg transition-all">
                   <Phone className="w-8 h-8 text-accent" />
@@ -546,7 +596,9 @@ const Index = () => {
               </Button>
             </Card>
             
-            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-secondary/50 group animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-secondary/50 group animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="flex items-center gap-5 mb-6">
                 <div className="p-5 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl group-hover:scale-110 group-hover:shadow-lg transition-all">
                   <Linkedin className="w-8 h-8 text-secondary" />
@@ -561,7 +613,9 @@ const Index = () => {
               </Button>
             </Card>
             
-            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/50 group animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/50 group animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="flex items-center gap-5 mb-6">
                 <div className="p-5 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl group-hover:scale-110 group-hover:shadow-lg transition-all">
                   <Github className="w-8 h-8 text-primary" />
@@ -585,8 +639,6 @@ const Index = () => {
           <p>© 2025 Mohsin Ali. All rights reserved. Built with passion for data analytics.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
