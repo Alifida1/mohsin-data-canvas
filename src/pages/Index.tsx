@@ -630,6 +630,100 @@ const Index = () => {
               </Button>
             </Card>
           </div>
+
+          {/* Contact Form */}
+          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Card className="p-8 md:p-12 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/30 hover:shadow-2xl transition-all duration-300">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+                  Send Me a Message
+                </h3>
+                <p className="text-muted-foreground">
+                  Fill out the form below and I'll get back to you as soon as possible
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-base">Name *</Label>
+                    <Input
+                      id="name"
+                      placeholder="Your name"
+                      {...register("name")}
+                      disabled={isSubmitting}
+                      className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-destructive">{errors.name.message}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-base">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      {...register("email")}
+                      disabled={isSubmitting}
+                      className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
+                    />
+                    {errors.email && (
+                      <p className="text-sm text-destructive">{errors.email.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="subject" className="text-base">Subject *</Label>
+                  <Input
+                    id="subject"
+                    placeholder="What's this about?"
+                    {...register("subject")}
+                    disabled={isSubmitting}
+                    className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
+                  />
+                  {errors.subject && (
+                    <p className="text-sm text-destructive">{errors.subject.message}</p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-base">Message *</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell me about your project or inquiry..."
+                    rows={6}
+                    {...register("message")}
+                    disabled={isSubmitting}
+                    className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all resize-none"
+                  />
+                  {errors.message && (
+                    <p className="text-sm text-destructive">{errors.message.message}</p>
+                  )}
+                </div>
+
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="w-full md:w-auto px-8 bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/50 transition-all"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className="animate-pulse">Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
+            </Card>
+          </div>
         </div>
       </section>
 
