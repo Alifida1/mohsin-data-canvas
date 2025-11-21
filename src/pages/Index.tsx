@@ -26,52 +26,46 @@ const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
   email: z.string().email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
   subject: z.string().min(3, "Subject must be at least 3 characters").max(200, "Subject must be less than 200 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
+  message: z.string().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters")
 });
-
 type ContactFormData = z.infer<typeof contactFormSchema>;
-
 const Index = () => {
   // Form setup
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
+    formState: {
+      errors,
+      isSubmitting
+    },
+    reset
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactFormSchema)
   });
 
   // Form submission handler
   const onSubmit = async (data: ContactFormData) => {
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: data.name,
-          from_email: data.email,
-          subject: data.subject,
-          message: data.message,
-        }
-      );
-
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message
+      });
       toast({
         title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        description: "Thank you for reaching out. I'll get back to you soon."
       });
-
       reset();
     } catch (error) {
       console.error("EmailJS Error:", error);
       toast({
         title: "Failed to send message",
         description: "Please try again later or contact me directly via email.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
   };
-
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -426,9 +420,9 @@ const Index = () => {
               </div>
               <div className="p-6 bg-gradient-to-br from-card to-card/80">
                 <Badge className="mb-3 bg-secondary/10 text-secondary border-secondary/20">ETL Pipeline</Badge>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">MongoDB to PostgreSQL</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">MedAnalytics ETL: End-to-End Health Data Engineering</h3>
                 <p className="text-muted-foreground">
-                  Efficient ETL pipeline for diabetes data migration and transformation between databases.
+                  Efficient ETL pipeline for diabetes data migration and transformation between NoSQL & SQL databases.
                 </p>
               </div>
             </Card>
@@ -441,10 +435,10 @@ const Index = () => {
                 <TrendingUp className="w-20 h-20 text-primary relative z-10 group-hover:scale-110 transition-transform" />
               </div>
               <div className="p-6 bg-gradient-to-br from-card to-card/80">
-                <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">Tableau</Badge>
+                <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">Power BI </Badge>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Predictive Model Performance</h3>
                 <p className="text-muted-foreground">
-                  Interactive Tableau reports showcasing machine learning model performance metrics.
+                  Interactive Power BI reports showcasing machine learning model performance metrics.
                 </p>
               </div>
             </Card>
@@ -699,7 +693,9 @@ const Index = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-16 animate-fade-in" style={{
+          animationDelay: '0.4s'
+        }}>
             <Card className="p-8 md:p-12 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-2 hover:border-primary/30 hover:shadow-2xl transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
@@ -714,79 +710,36 @@ const Index = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-base">Name *</Label>
-                    <Input
-                      id="name"
-                      placeholder="Your name"
-                      {...register("name")}
-                      disabled={isSubmitting}
-                      className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
-                    />
-                    {errors.name && (
-                      <p className="text-sm text-destructive">{errors.name.message}</p>
-                    )}
+                    <Input id="name" placeholder="Your name" {...register("name")} disabled={isSubmitting} className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all" />
+                    {errors.name && <p className="text-sm text-destructive">{errors.name.message}</p>}
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-base">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      {...register("email")}
-                      disabled={isSubmitting}
-                      className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
-                    />
-                    {errors.email && (
-                      <p className="text-sm text-destructive">{errors.email.message}</p>
-                    )}
+                    <Input id="email" type="email" placeholder="your.email@example.com" {...register("email")} disabled={isSubmitting} className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all" />
+                    {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="subject" className="text-base">Subject *</Label>
-                  <Input
-                    id="subject"
-                    placeholder="What's this about?"
-                    {...register("subject")}
-                    disabled={isSubmitting}
-                    className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all"
-                  />
-                  {errors.subject && (
-                    <p className="text-sm text-destructive">{errors.subject.message}</p>
-                  )}
+                  <Input id="subject" placeholder="What's this about?" {...register("subject")} disabled={isSubmitting} className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all" />
+                  {errors.subject && <p className="text-sm text-destructive">{errors.subject.message}</p>}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-base">Message *</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell me about your project or inquiry..."
-                    rows={6}
-                    {...register("message")}
-                    disabled={isSubmitting}
-                    className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all resize-none"
-                  />
-                  {errors.message && (
-                    <p className="text-sm text-destructive">{errors.message.message}</p>
-                  )}
+                  <Textarea id="message" placeholder="Tell me about your project or inquiry..." rows={6} {...register("message")} disabled={isSubmitting} className="bg-background/50 backdrop-blur-sm border-2 focus:border-primary transition-all resize-none" />
+                  {errors.message && <p className="text-sm text-destructive">{errors.message.message}</p>}
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full md:w-auto px-8 bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/50 transition-all"
-                >
-                  {isSubmitting ? (
-                    <>
+                <Button type="submit" size="lg" disabled={isSubmitting} className="w-full md:w-auto px-8 bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/50 transition-all">
+                  {isSubmitting ? <>
                       <span className="animate-pulse">Sending...</span>
-                    </>
-                  ) : (
-                    <>
+                    </> : <>
                       <Send className="mr-2 h-5 w-5" />
                       Send Message
-                    </>
-                  )}
+                    </>}
                 </Button>
               </form>
             </Card>
