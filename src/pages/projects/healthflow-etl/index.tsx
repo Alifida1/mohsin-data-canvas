@@ -4,7 +4,7 @@ import avgHealthBySex from "./AVG_Health_Indicators_by_Sex.png";
 import avgMentalHealthByAge from "./AVG_MentalHealth_by_Age.png";
 import bmiDistribution from "./BMI_Distribution.png";
 import dataExtractionMongo from "./Data_Extraction_From_MongoDB.png";
-import rawDataToJupyter from "./Raw_Data_From_MongoDB_to_JupyterNB.png";
+import rawDataToJupyter from "./Raw_Data_From_MOngoDB_to_JupyterNB.png";
 import transformedData from "./Transformed_Data.png";
 import transformedDataPostgres from "./Transformed_Data_PostgreSQL.png";
 import dataLoadingPostgres from "./Data_Loading_to_PostgreSQL.png";
