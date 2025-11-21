@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HealthflowEtlPage from "./pages/projects/healthflow-etl/index";
+import BusinessIntelligencePage from "./pages/projects/business-intelligence/index";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/healthflow-etl" element={<HealthflowEtlPage />} />
+          <Route path="/projects/business-intelligence" element={<BusinessIntelligencePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
