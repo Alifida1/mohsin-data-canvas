@@ -34,11 +34,12 @@ Performed in Jupyter Notebook:
 - Distribution of diabetes outcomes  
 - Correlations between glucose, BMI, age, insulin  
 - Health risk indicator trends  
-- Patient condition segmentation  
+- Patient condition segmentation
 
-(Add screenshots here later)
+  🧮 Advanced SQL Analysis
 
----
+To enhance the analytical depth of the project, I performed an advanced SQL analysis in PostgreSQL. I grouped patients by age category and calculated key health indicators such as diabetes prevalence, average BMI, high blood pressure, high cholesterol, smoking rates, physical activity levels, and heavy alcohol consumption. Using CTEs, conditional aggregation, and window functions (RANK), I identified which age groups carry the highest diabetes burden and visualized how lifestyle risk factors differ across age segments.
+
 
 ## 🧰 Tech Stack
 - Python, Pandas, NumPy  
@@ -47,4 +48,4 @@ Performed in Jupyter Notebook:
 - Jupyter Notebook  
 - Matplotlib / Seaborn  
 
----
+
