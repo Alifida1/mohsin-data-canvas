@@ -12,7 +12,7 @@ import postgresDashboard from "./PostgreSQL_Dashboard.png";
 import correlationHeatmap from "./Health_Indicators_Correlation.png";
 import sqlAnalysisImage from "./SQL_Analysis_in_Postgresql.png";
 
-import notebookHtml from "./Healthflow_ETL_Pipeline.html";
+import notebookHtml from "./Healthflow_ETL_Pipeline.html?url";
 
 const edaImages: { src: string; caption: string }[] = [
   {
