@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, Github, Database, BarChart3, Brain, FileSpreadsheet, Code, TrendingUp, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -411,21 +412,23 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-secondary/50 animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-              <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-                <Database className="w-20 h-20 text-secondary relative z-10 group-hover:scale-110 transition-transform" />
-              </div>
-              <div className="p-6 bg-gradient-to-br from-card to-card/80">
-                <Badge className="mb-3 bg-secondary/10 text-secondary border-secondary/20">ETL Pipeline</Badge>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">MedAnalytics ETL: End-to-End Health Data Engineering</h3>
-                <p className="text-muted-foreground">
-                  Efficient ETL pipeline for diabetes data migration and transformation between NoSQL & SQL databases.
-                </p>
-              </div>
-            </Card>
+            <Link to="/projects/healthflow-etl" className="block">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-secondary/50 animate-fade-in cursor-pointer" style={{
+              animationDelay: '0.2s'
+            }}>
+                <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+                  <Database className="w-20 h-20 text-secondary relative z-10 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="p-6 bg-gradient-to-br from-card to-card/80">
+                  <Badge className="mb-3 bg-secondary/10 text-secondary border-secondary/20">ETL Pipeline</Badge>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">MedAnalytics ETL: End-to-End Health Data Engineering</h3>
+                  <p className="text-muted-foreground">
+                    Efficient ETL pipeline for diabetes data migration and transformation between NoSQL & SQL databases.
+                  </p>
+                </div>
+              </Card>
+            </Link>
             
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-primary/50 animate-fade-in" style={{
             animationDelay: '0.3s'
