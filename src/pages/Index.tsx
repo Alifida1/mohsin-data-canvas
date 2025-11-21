@@ -446,21 +446,23 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{
-            animationDelay: '0.4s'
-          }}>
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-                <FileSpreadsheet className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
-              </div>
-              <div className="p-6 bg-gradient-to-br from-card to-card/80">
-                <Badge className="mb-3 bg-accent/10 text-accent border-accent/20">Big Data</Badge>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">Business Intelligence Project</h3>
-                <p className="text-muted-foreground">
-                  Comprehensive BI solution analyzing Alibaba data for strategic business insights.
-                </p>
-              </div>
-            </Card>
+            <Link to="/projects/business-intelligence" className="block">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in cursor-pointer" style={{
+              animationDelay: '0.4s'
+            }}>
+                <div className="aspect-video bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+                  <FileSpreadsheet className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="p-6 bg-gradient-to-br from-card to-card/80">
+                  <Badge className="mb-3 bg-accent/10 text-accent border-accent/20">Big Data</Badge>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">Business Intelligence Project</h3>
+                  <p className="text-muted-foreground">
+                    Comprehensive BI solution analyzing Alibaba data for strategic business insights.
+                  </p>
+                </div>
+              </Card>
+            </Link>
             
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 border-primary/50 hover:border-primary bg-gradient-to-br from-primary/5 to-secondary/5 animate-fade-in" style={{
             animationDelay: '0.5s'
