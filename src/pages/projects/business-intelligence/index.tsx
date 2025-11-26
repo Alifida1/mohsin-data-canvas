@@ -399,6 +399,33 @@ export default function BusinessIntelligenceProject() {
             ▶ Watch Project Video on LinkedIn
           </a>
         </motion.section>
+        {/* Project demo video */}
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mt-6 flex flex-col items-center rounded-3xl border bg-card p-6 text-center md:p-8"
+        >
+          <h2 className="mb-3 flex items-center justify-center gap-2 text-lg font-semibold md:text-xl">
+            <PlayCircle className="h-5 w-5 text-sky-400" />
+            Project Showcase Video
+          </h2>
+
+          <p className="mb-5 max-w-2xl text-sm text-muted-foreground md:text-[0.95rem]">
+            I recorded a walkthrough of the Business Intelligence dashboards
+            that explains the data sourcing from Alibaba, big data processing
+            steps, and how to interpret the KPIs and insights in Power BI.
+          </p>
+
+          <a
+            href="https://www.linkedin.com/posts/mohsin-ali-5a3832185_powerbi-datavisualization-businessintelligence-activity-7279497312844869632-2PqO?utm_source=share&utm_medium=member_desktop&rcm=ACoAACu6M8sBgFD9C7uR4XaiUj7ldZhEyHFsebY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-500 px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:from-purple-500 hover:to-indigo-400"
+          >
+            ▶ Watch Project Video on LinkedIn
+          </a>
+        </motion.section>
       </main>
     </div>
   );
