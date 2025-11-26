@@ -10,9 +10,9 @@ import {
 
 // Make sure these files exist in this folder.
 // If your filenames are different, just update the paths below.
-import sentimentDashboard from "./sentiment_analysis.png";
-import recommendationDashboard from "./products_recommendation.png";
-import supplierDashboard from "./supplier_delivery_response.png";
+import sentimentDashboard from "./Sentiment_Analysis.png";
+import recommendationDashboard from "./Product_Recommendation.png";
+import supplierDashboard from "./Supplier_Delivery_Response.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
