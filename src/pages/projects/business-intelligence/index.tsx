@@ -30,7 +30,7 @@ const stagger = {
 
 export default function BusinessIntelligenceProject() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Page container */}
       <main className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 md:px-8 md:pt-14">
         {/* Header */}
@@ -38,7 +38,7 @@ export default function BusinessIntelligenceProject() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900/80 via-slate-950 to-slate-900/80 p-6 shadow-xl shadow-slate-900/60 md:p-8"
+          className="rounded-3xl border bg-card p-6 shadow-lg md:p-8"
         >
           <div className="mb-4 flex flex-wrap items-center gap-3">
             <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/40">
@@ -49,11 +49,11 @@ export default function BusinessIntelligenceProject() {
             </span>
           </div>
 
-          <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
+          <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
             Business Intelligence with Big Data: Alibaba Hardware Analytics
           </h1>
 
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
             End-to-end business intelligence project built on web-scraped
             computer hardware data from Alibaba. I cleaned and transformed the
             dataset, processed it using big data tools, and connected the
@@ -61,7 +61,7 @@ export default function BusinessIntelligenceProject() {
             insights on products, sentiment, and supplier performance.
           </p>
 
-          <div className="mt-5 grid gap-4 text-xs text-slate-300 md:grid-cols-3 md:text-sm">
+          <div className="mt-5 grid gap-4 text-xs text-muted-foreground md:grid-cols-3 md:text-sm">
             <div className="flex items-center gap-2">
               <Database className="h-4 w-4 text-emerald-400" />
               <span>Web-scraped big data (Alibaba hardware)</span>
@@ -87,12 +87,12 @@ export default function BusinessIntelligenceProject() {
           {/* Project overview */}
           <motion.div
             variants={fadeUp}
-            className="rounded-3xl border border-slate-800 bg-slate-950/60 p-6"
+            className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-slate-50 md:text-xl">
+            <h2 className="text-lg font-semibold text-foreground md:text-xl">
               Project Overview
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300 md:text-[0.95rem]">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-[0.95rem]">
               I built a business intelligence solution that takes raw,
               web-scraped data from Alibaba and turns it into decision-ready
               insights for computer hardware suppliers. The pipeline covers
@@ -106,12 +106,12 @@ export default function BusinessIntelligenceProject() {
               separately in a dedicated project.
             </p>
 
-            <div className="mt-5 space-y-4 text-sm text-slate-200">
+            <div className="mt-5 space-y-4 text-sm text-foreground">
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   Business Questions
                 </h3>
-                <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-300">
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-muted-foreground">
                   <li>
                     Which suppliers and products drive the highest sales and
                     engagement?
@@ -136,15 +136,15 @@ export default function BusinessIntelligenceProject() {
           {/* Tech stack */}
           <motion.div
             variants={fadeUp}
-            className="rounded-3xl border border-slate-800 bg-slate-950/60 p-6"
+            className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-slate-50 md:text-xl">
+            <h2 className="text-lg font-semibold text-foreground md:text-xl">
               Data & BI Stack
             </h2>
 
-            <div className="mt-3 grid gap-4 text-sm text-slate-300">
+            <div className="mt-3 grid gap-4 text-sm text-muted-foreground">
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   Data Collection & Preparation
                 </h3>
                 <p className="mt-1 text-[0.9rem]">
@@ -159,7 +159,7 @@ export default function BusinessIntelligenceProject() {
               </div>
 
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   Big Data Processing
                 </h3>
                 <p className="mt-1 text-[0.9rem]">
@@ -174,7 +174,7 @@ export default function BusinessIntelligenceProject() {
               </div>
 
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   Business Intelligence Layer
                 </h3>
                 <p className="mt-1 text-[0.9rem]">
@@ -186,17 +186,17 @@ export default function BusinessIntelligenceProject() {
                 </p>
               </div>
 
-              <div className="mt-1 flex flex-wrap gap-2 text-xs text-slate-300">
-                <span className="rounded-full bg-slate-800 px-3 py-1">
+              <div className="mt-1 flex flex-wrap gap-2 text-xs text-muted-foreground">
+                <span className="rounded-full bg-muted px-3 py-1">
                   Web Scraping (Alibaba)
                 </span>
-                <span className="rounded-full bg-slate-800 px-3 py-1">
+                <span className="rounded-full bg-muted px-3 py-1">
                   Excel Data Cleaning
                 </span>
-                <span className="rounded-full bg-slate-800 px-3 py-1">
+                <span className="rounded-full bg-muted px-3 py-1">
                   Hadoop / Big Data Analytics
                 </span>
-                <span className="rounded-full bg-slate-800 px-3 py-1">
+                <span className="rounded-full bg-muted px-3 py-1">
                   Power BI
                 </span>
               </div>
@@ -212,10 +212,10 @@ export default function BusinessIntelligenceProject() {
           className="space-y-6"
         >
           <motion.div variants={fadeUp}>
-            <h2 className="text-lg font-semibold text-slate-50 md:text-xl">
+            <h2 className="text-lg font-semibold text-foreground md:text-xl">
               Power BI Dashboards
             </h2>
-            <p className="mt-2 max-w-3xl text-sm text-slate-300 md:text-[0.95rem]">
+            <p className="mt-2 max-w-3xl text-sm text-muted-foreground md:text-[0.95rem]">
               I designed three main dashboard families to surface insights for
               product, customer, and operations teams. Each view supports
               drill-downs, cross-filtering, and parameter-driven exploration so
@@ -228,18 +228,18 @@ export default function BusinessIntelligenceProject() {
             className="grid gap-6 md:grid-cols-3"
           >
             {/* Sentiment */}
-            <div className="flex flex-col gap-3 rounded-3xl border border-slate-800 bg-slate-950/60 p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-slate-50">
+            <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                 <MessageCircle className="h-4 w-4 text-pink-400" />
                 Sentiment Analysis (Product Feedback)
               </div>
-              <p className="text-xs leading-relaxed text-slate-300">
+              <p className="text-xs leading-relaxed text-muted-foreground">
                 Tracks positive, neutral, and negative feedback across
                 companies, with breakdowns by rating range and product company.
                 Helps identify brands with consistently strong or weak customer
                 sentiment.
               </p>
-              <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80">
+              <div className="overflow-hidden rounded-2xl border bg-muted/30">
                 <img
                   src={sentimentDashboard}
                   alt="Power BI sentiment analysis dashboard"
@@ -249,18 +249,18 @@ export default function BusinessIntelligenceProject() {
             </div>
 
             {/* Product Recommendation */}
-            <div className="flex flex-col gap-3 rounded-3xl border border-slate-800 bg-slate-950/60 p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-slate-50">
+            <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                 <PackageSearch className="h-4 w-4 text-emerald-400" />
                 Product Recommendation & Sales Insights
               </div>
-              <p className="text-xs leading-relaxed text-slate-300">
+              <p className="text-xs leading-relaxed text-muted-foreground">
                 Analyses company-level sales, pricing patterns, reviews, and
                 average ratings. The dashboard supports comparative analysis to
                 recommend high-performing companies and product lines based on
                 commercial and engagement KPIs.
               </p>
-              <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80">
+              <div className="overflow-hidden rounded-2xl border bg-muted/30">
                 <img
                   src={recommendationDashboard}
                   alt="Power BI product recommendation dashboard"
@@ -270,18 +270,18 @@ export default function BusinessIntelligenceProject() {
             </div>
 
             {/* Supplier & Delivery */}
-            <div className="flex flex-col gap-3 rounded-3xl border border-slate-800 bg-slate-950/60 p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-slate-50">
+            <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                 <Truck className="h-4 w-4 text-sky-400" />
                 Supplier & Delivery Response
               </div>
-              <p className="text-xs leading-relaxed text-slate-300">
+              <p className="text-xs leading-relaxed text-muted-foreground">
                 Monitors supplier_response and delivery_response metrics to see
                 how quickly companies react to orders and feedback.
                 Visualizations compare supplier vs delivery averages and highlight
                 operational outliers.
               </p>
-              <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80">
+              <div className="overflow-hidden rounded-2xl border bg-muted/30">
                 <img
                   src={supplierDashboard}
                   alt="Power BI supplier and delivery response dashboard"
@@ -301,12 +301,12 @@ export default function BusinessIntelligenceProject() {
         >
           <motion.div
             variants={fadeUp}
-            className="rounded-3xl border border-slate-800 bg-slate-950/60 p-6"
+            className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-slate-50 md:text-xl">
+            <h2 className="text-lg font-semibold text-foreground md:text-xl">
               What I Did
             </h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-300">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
               <li>
                 Scraped computer hardware product and review data from Alibaba,
                 then cleaned and standardized attributes such as ratings, raters,
@@ -332,12 +332,12 @@ export default function BusinessIntelligenceProject() {
 
           <motion.div
             variants={fadeUp}
-            className="rounded-3xl border border-slate-800 bg-slate-950/60 p-6"
+            className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-slate-50 md:text-xl">
+            <h2 className="text-lg font-semibold text-foreground md:text-xl">
               Outcomes & Value
             </h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-300">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-muted-foreground">
               <li>
                 Enabled quick comparison of suppliers based on sales, ratings,
                 sentiment, and response behavior.
@@ -365,10 +365,10 @@ export default function BusinessIntelligenceProject() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="rounded-3xl border border-dashed border-slate-800 bg-slate-950/60 p-5 text-xs text-slate-300 md:text-sm"
+          className="rounded-3xl border border-dashed bg-muted/30 p-5 text-xs text-muted-foreground md:text-sm"
         >
           <p>
-            <span className="font-semibold text-slate-100">
+            <span className="font-semibold text-foreground">
               Note on predictive modelling:
             </span>{" "}
             In this project page I focus on the data engineering, big data
