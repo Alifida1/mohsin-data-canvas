@@ -6,10 +6,10 @@ import {
   MessageCircle,
   PackageSearch,
   Truck,
+  PlayCircle,
 } from "lucide-react";
 
 // Make sure these files exist in this folder.
-// If your filenames are different, just update the paths below.
 import sentimentDashboard from "./Sentiment_Analysis.png";
 import recommendationDashboard from "./Product_Recommendation.png";
 import supplierDashboard from "./Supplier_Delivery_Response.png";
@@ -32,7 +32,7 @@ export default function BusinessIntelligenceProject() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Page container */}
-      <main className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 md:px-8 md:pt-14">
+      <main className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-20 pt-10 md:px-8 md:pt-14">
         {/* Header */}
         <motion.section
           initial="hidden"
@@ -49,7 +49,7 @@ export default function BusinessIntelligenceProject() {
             </span>
           </div>
 
-          <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+          <h1 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
             Business Intelligence with Big Data: Alibaba Hardware Analytics
           </h1>
 
@@ -89,16 +89,13 @@ export default function BusinessIntelligenceProject() {
             variants={fadeUp}
             className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-foreground md:text-xl">
-              Project Overview
-            </h2>
+            <h2 className="text-lg font-semibold md:text-xl">Project Overview</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-[0.95rem]">
               I built a business intelligence solution that takes raw,
               web-scraped data from Alibaba and turns it into decision-ready
-              insights for computer hardware suppliers. The pipeline covers
-              data acquisition, cleaning and transformation, big data
-              processing, and rich Power BI visualizations. This project focuses
-              on the{" "}
+              insights for computer hardware suppliers. The pipeline covers data
+              acquisition, cleaning and transformation, big data processing, and
+              rich Power BI visualizations. This project focuses on the{" "}
               <span className="font-medium text-sky-300">
                 BI & big data analytics layer
               </span>
@@ -117,8 +114,8 @@ export default function BusinessIntelligenceProject() {
                     engagement?
                   </li>
                   <li>
-                    How do customer sentiments vary across companies and
-                    product lines?
+                    How do customer sentiments vary across companies and product
+                    lines?
                   </li>
                   <li>
                     Are supplier and delivery response patterns aligned with
@@ -138,9 +135,7 @@ export default function BusinessIntelligenceProject() {
             variants={fadeUp}
             className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-foreground md:text-xl">
-              Data & BI Stack
-            </h2>
+            <h2 className="text-lg font-semibold md:text-xl">Data & BI Stack</h2>
 
             <div className="mt-3 grid gap-4 text-sm text-muted-foreground">
               <div>
@@ -167,7 +162,7 @@ export default function BusinessIntelligenceProject() {
                   <span className="font-medium text-emerald-300">
                     Hadoop-based big data analytics
                   </span>{" "}
-                  (HDFS & MapReduce style aggregations) and batch computations
+                  (HDFS & MapReduce-style aggregations) and batch computations
                   to generate aggregated facts and KPIs at product and company
                   level.
                 </p>
@@ -212,7 +207,7 @@ export default function BusinessIntelligenceProject() {
           className="space-y-6"
         >
           <motion.div variants={fadeUp}>
-            <h2 className="text-lg font-semibold text-foreground md:text-xl">
+            <h2 className="text-lg font-semibold md:text-xl">
               Power BI Dashboards
             </h2>
             <p className="mt-2 max-w-3xl text-sm text-muted-foreground md:text-[0.95rem]">
@@ -229,7 +224,7 @@ export default function BusinessIntelligenceProject() {
           >
             {/* Sentiment */}
             <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+              <div className="flex items-center gap-2 text-sm font-semibold">
                 <MessageCircle className="h-4 w-4 text-pink-400" />
                 Sentiment Analysis (Product Feedback)
               </div>
@@ -250,7 +245,7 @@ export default function BusinessIntelligenceProject() {
 
             {/* Product Recommendation */}
             <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+              <div className="flex items-center gap-2 text-sm font-semibold">
                 <PackageSearch className="h-4 w-4 text-emerald-400" />
                 Product Recommendation & Sales Insights
               </div>
@@ -271,15 +266,16 @@ export default function BusinessIntelligenceProject() {
 
             {/* Supplier & Delivery */}
             <div className="flex flex-col gap-3 rounded-3xl border bg-card p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+              <div className="flex items-center gap-2 text-sm font-semibold">
                 <Truck className="h-4 w-4 text-sky-400" />
                 Supplier & Delivery Response
               </div>
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Monitors supplier_response and delivery_response metrics to see
-                how quickly companies react to orders and feedback.
-                Visualizations compare supplier vs delivery averages and highlight
-                operational outliers.
+                Monitors <code>supplier_response</code> and{" "}
+                <code>delivery_response</code> metrics to see how quickly
+                companies react to orders and feedback. Visualizations compare
+                supplier vs delivery averages and highlight operational
+                outliers.
               </p>
               <div className="overflow-hidden rounded-2xl border bg-muted/30">
                 <img
@@ -303,14 +299,12 @@ export default function BusinessIntelligenceProject() {
             variants={fadeUp}
             className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-foreground md:text-xl">
-              What I Did
-            </h2>
+            <h2 className="text-lg font-semibold md:text-xl">What I Did</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
               <li>
                 Scraped computer hardware product and review data from Alibaba,
-                then cleaned and standardized attributes such as ratings, raters,
-                prices, warranties, and response indicators.
+                then cleaned and standardized attributes such as ratings,
+                raters, prices, warranties, and response indicators.
               </li>
               <li>
                 Designed a big data processing flow using Hadoop-style batch
@@ -324,8 +318,8 @@ export default function BusinessIntelligenceProject() {
               </li>
               <li>
                 Developed interactive dashboards with slicers and drill-downs so
-                business users can filter by company, rating band, feedback type,
-                and response categories.
+                business users can filter by company, rating band, feedback
+                type, and response categories.
               </li>
             </ul>
           </motion.div>
@@ -334,10 +328,10 @@ export default function BusinessIntelligenceProject() {
             variants={fadeUp}
             className="rounded-3xl border bg-card p-6"
           >
-            <h2 className="text-lg font-semibold text-foreground md:text-xl">
+            <h2 className="text-lg font-semibold md:text-xl">
               Outcomes & Value
             </h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-muted-foreground">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
               <li>
                 Enabled quick comparison of suppliers based on sales, ratings,
                 sentiment, and response behavior.
@@ -377,36 +371,35 @@ export default function BusinessIntelligenceProject() {
             separately as a dedicated machine learning project.
           </p>
         </motion.section>
+
+        {/* Project demo video */}
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mt-6 flex flex-col items-center rounded-3xl border bg-card p-6 text-center md:p-8"
+        >
+          <h2 className="mb-3 flex items-center justify-center gap-2 text-lg font-semibold md:text-xl">
+            <PlayCircle className="h-5 w-5 text-sky-400" />
+            Project Showcase Video
+          </h2>
+
+          <p className="mb-5 max-w-2xl text-sm text-muted-foreground md:text-[0.95rem]">
+            I recorded a walkthrough of the Business Intelligence dashboards
+            that explains the data sourcing from Alibaba, big data processing
+            steps, and how to interpret the KPIs and insights in Power BI.
+          </p>
+
+          <a
+            href="https://www.linkedin.com/posts/mohsin-ali-5a3832185_powerbi-datavisualization-businessintelligence-activity-7279497312844869632-2PqO?utm_source=share&utm_medium=member_desktop&rcm=ACoAACu6M8sBgFD9C7uR4XaiUj7ldZhEyHFsebY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-500 px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:from-purple-500 hover:to-indigo-400"
+          >
+            ▶ Watch Project Video on LinkedIn
+          </a>
+        </motion.section>
       </main>
-      {/* --- Project Demo Video Section --- */}
-<section className="mt-16 flex flex-col items-center text-center">
-  <h2 className="text-2xl md:text-3xl font-semibold mb-3 flex items-center gap-2">
-    <span role="img" aria-label="video">
-      🎥
-    </span>
-    Project Showcase Video
-  </h2>
-
-  <p className="text-gray-300 max-w-2xl mb-6">
-    I recorded a walkthrough of the Business Intelligence dashboards that explains the data
-    sourcing from Alibaba, big data processing steps, and how to interpret the KPIs and insights
-    in Power BI.
-  </p>
-
-  <a
-    href="https://www.linkedin.com/posts/mohsin-ali-5a3832185_powerbi-datavisualization-businessintelligence-activity-7279497312844869632-2PqO?utm_source=share&utm_medium=member_desktop&rcm=ACoAACu6M8sBgFD9C7uR4XaiUj7ldZhEyHFsebY"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white
-               bg-gradient-to-r from-purple-600 to-indigo-500
-               hover:from-purple-500 hover:to-indigo-400
-               transition-transform duration-200 hover:scale-105"
-  >
-    ▶ Watch Project Video on LinkedIn
-  </a>
-</section>
-
     </div>
   );
 }
-
