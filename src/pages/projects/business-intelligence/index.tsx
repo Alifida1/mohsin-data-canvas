@@ -381,3 +381,19 @@ export default function BusinessIntelligenceProject() {
     </div>
   );
 }
+{/* --- Project Demo Video Section --- */}
+<div className="mt-10 mb-6 flex flex-col items-center text-center">
+  <h2 className="text-xl font-semibold mb-2">🎥 Project Showcase Video</h2>
+  <p className="text-gray-300 max-w-3xl mb-4">
+    I recorded a walkthrough of the Business Intelligence dashboards and explain the data flow,
+    big data processing steps, and insights derived from the Power BI reports.
+  </p>
+  <a
+    href="https://www.linkedin.com/posts/mohsin-ali-5a3832185_powerbi-datavisualization-businessintelligence-activity-7279497312844869632-2PqO?utm_source=share&utm_medium=member_desktop&rcm=ACoAACu6M8sBgFD9C7uR4XaiUj7ldZhEyHFsebY"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-lg text-white font-medium hover:scale-105 transition-all bg-gradient-to-r from-purple-600 to-blue-600"
+  >
+    ▶️ Watch Project Video on LinkedIn
+  </a>
+</div>
