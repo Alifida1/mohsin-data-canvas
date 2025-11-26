@@ -378,22 +378,35 @@ export default function BusinessIntelligenceProject() {
           </p>
         </motion.section>
       </main>
-    </div>
-  );
-}
-{/* --- Project Demo Video Section --- */}
-<div className="mt-10 mb-6 flex flex-col items-center text-center">
-  <h2 className="text-xl font-semibold mb-2">🎥 Project Showcase Video</h2>
-  <p className="text-gray-300 max-w-3xl mb-4">
-    I recorded a walkthrough of the Business Intelligence dashboards and explain the data flow,
-    big data processing steps, and insights derived from the Power BI reports.
+      {/* --- Project Demo Video Section --- */}
+<section className="mt-16 flex flex-col items-center text-center">
+  <h2 className="text-2xl md:text-3xl font-semibold mb-3 flex items-center gap-2">
+    <span role="img" aria-label="video">
+      🎥
+    </span>
+    Project Showcase Video
+  </h2>
+
+  <p className="text-gray-300 max-w-2xl mb-6">
+    I recorded a walkthrough of the Business Intelligence dashboards that explains the data
+    sourcing from Alibaba, big data processing steps, and how to interpret the KPIs and insights
+    in Power BI.
   </p>
+
   <a
     href="https://www.linkedin.com/posts/mohsin-ali-5a3832185_powerbi-datavisualization-businessintelligence-activity-7279497312844869632-2PqO?utm_source=share&utm_medium=member_desktop&rcm=ACoAACu6M8sBgFD9C7uR4XaiUj7ldZhEyHFsebY"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-6 py-3 rounded-lg text-white font-medium hover:scale-105 transition-all bg-gradient-to-r from-purple-600 to-blue-600"
+    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white
+               bg-gradient-to-r from-purple-600 to-indigo-500
+               hover:from-purple-500 hover:to-indigo-400
+               transition-transform duration-200 hover:scale-105"
   >
-    ▶️ Watch Project Video on LinkedIn
+    ▶ Watch Project Video on LinkedIn
   </a>
-</div>
+</section>
+
+    </div>
+  );
+}
+
