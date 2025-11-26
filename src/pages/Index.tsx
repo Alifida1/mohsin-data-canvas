@@ -396,21 +396,23 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-                <Brain className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
-              </div>
-              <div className="p-6 bg-gradient-to-br from-card to-card/80">
-                <Badge className="mb-3 bg-accent/10 text-accent border-accent/20">Machine Learning</Badge>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">Renewable Energy Prediction</h3>
-                <p className="text-muted-foreground">
-                  Predictive model using Random Forest & SVM for renewable energy consumption forecasting.
-                </p>
-              </div>
-            </Card>
+            <Link to="/projects/renewable-forecasting" className="block">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-accent/50 animate-fade-in cursor-pointer" style={{
+              animationDelay: '0.1s'
+            }}>
+                <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+                  <Brain className="w-20 h-20 text-accent relative z-10 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="p-6 bg-gradient-to-br from-card to-card/80">
+                  <Badge className="mb-3 bg-accent/10 text-accent border-accent/20">Machine Learning</Badge>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">Renewable Energy Prediction</h3>
+                  <p className="text-muted-foreground">
+                    Predictive model using Random Forest & SVM for renewable energy consumption forecasting.
+                  </p>
+                </div>
+              </Card>
+            </Link>
             
             <Link to="/projects/healthflow-etl" className="block">
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group border-2 hover:border-secondary/50 animate-fade-in cursor-pointer" style={{
