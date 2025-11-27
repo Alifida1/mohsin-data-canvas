@@ -149,7 +149,12 @@ const Index = () => {
                 >
                   View Portfolio
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 hover:bg-accent/10 hover:border-accent transition-all hover:scale-105 px-8">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 hover:bg-accent/10 hover:border-accent transition-all hover:scale-105 px-8"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Contact Me
                 </Button>
               </div>
