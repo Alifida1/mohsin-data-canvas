@@ -685,8 +685,14 @@ const Index = () => {
                   <p className="text-muted-foreground text-sm">Connect professionally</p>
                 </div>
               </div>
-              <Button variant="outline" className="w-full border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all">
-                View Profile
+              <Button 
+                variant="outline" 
+                className="w-full border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all"
+                asChild
+              >
+                <a href="https://www.linkedin.com/in/mohsin-ali-5a3832185/" target="_blank" rel="noopener noreferrer">
+                  View Profile
+                </a>
               </Button>
             </Card>
             
