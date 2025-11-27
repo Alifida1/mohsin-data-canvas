@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HealthflowEtlPage from "./pages/projects/healthflow-etl/index";
 import BusinessIntelligencePage from "./pages/projects/business-intelligence/index";
+import RenewableForecastingPage from "./pages/projects/renewable-forecasting/index";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects/healthflow-etl" element={<HealthflowEtlPage />} />
           <Route path="/projects/business-intelligence" element={<BusinessIntelligencePage />} />
+          <Route path="/projects/renewable-forecasting" element={<RenewableForecastingPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
