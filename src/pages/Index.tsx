@@ -142,7 +142,11 @@ const Index = () => {
               <div className="flex flex-wrap gap-4 pt-6 animate-slide-up" style={{
               animationDelay: '0.3s'
             }}>
-                <Button size="lg" className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent/80 text-accent-foreground shadow-lg hover:shadow-xl transition-all hover:scale-105 px-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent/80 text-accent-foreground shadow-lg hover:shadow-xl transition-all hover:scale-105 px-8"
+                  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   View Portfolio
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 hover:bg-accent/10 hover:border-accent transition-all hover:scale-105 px-8">
