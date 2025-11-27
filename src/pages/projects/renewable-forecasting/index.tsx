@@ -19,7 +19,7 @@ import cnnStructure from "./CNN_structure.png";
 import seasonalHeatmap from "./seasonal_consumption_heatmap.png";
 import energyBySeason from "./energy_consumption_by_season.png";
 import energyBySector from "./energy_consumption_in_Sectors.png";
-import monthlySources from "./monthly_AVG_consumption_from_different_sources.png";
+import monthlySources from "./monthly_AVG_consumption_from__different_sources.png";
 
 import rfEval from "./RF_Evaluation.png";
 import svmEval from "./SVM_Evaluation.png";
