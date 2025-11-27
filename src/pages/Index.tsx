@@ -708,8 +708,14 @@ const Index = () => {
                   <p className="text-muted-foreground text-sm">Check out my code</p>
                 </div>
               </div>
-              <Button variant="outline" className="w-full border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all">
-                View GitHub
+              <Button 
+                variant="outline" 
+                className="w-full border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                asChild
+              >
+                <a href="https://github.com/Alifida1" target="_blank" rel="noopener noreferrer">
+                  View GitHub
+                </a>
               </Button>
             </Card>
           </div>
