@@ -170,7 +170,7 @@ const Index = () => {
                 <a href="https://www.linkedin.com/in/mohsin-ali-5a3832185/" target="_blank" rel="noopener noreferrer" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-secondary hover:bg-secondary/10 transition-all hover:scale-110 hover:shadow-lg">
                   <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors" />
                 </a>
-                <a href="#" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110 hover:shadow-lg">
+                <a href="https://github.com/Alifida1" target="_blank" rel="noopener noreferrer" className="group p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110 hover:shadow-lg">
                   <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
               </div>
