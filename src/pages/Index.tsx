@@ -59,7 +59,6 @@ const Index = () => {
       });
       reset();
     } catch (error) {
-      console.error("EmailJS Error:", error);
       toast({
         title: "Failed to send message",
         description: "Please try again later or contact me directly via email.",
